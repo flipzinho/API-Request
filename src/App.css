@@ -1,38 +1,38 @@
-.App {
-  text-align: center;
+.posts {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  min-height: 100vh; background-color: #eee; max-width: 1200px; margin: 0 auto;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.post-content {
+  background: white;  padding: 30px }
+.post{
+  background: white; box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); transition: transform 300ms ease-in-out;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.post h3{
+  padding: 10px 10px;
 }
-
-.App-link {
-  color: #61dafb;
+.post p{
+  padding: 10px 10px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.post:hover{
+  transform: scale(1.05);
+}
+.post img {
+  max-width: 100%;
+}
+.button-container{
+ min-height: 60px; display: flex; justify-content: flex-end; margin-top: 30px;
+}
+.button {
+  width: 100%; background-color: darkblue; color: white; border: none; cursor: pointer;
+}
+.button:disabled {
+background-color: #888; cursor: not-allowed
+}
+.search-container {
+  margin-bottom: 30px;  padding-top: 30px;
+}
+.input {
+  width: 100%; font-size: 35px; padding: 5px 10px;
 }
